@@ -3,5 +3,13 @@
     "source.fixAll": true,
     "source.fixAll.eslint": true
   },
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  {
+    "emmet.includeLanguages": {
+       "javascript": "javascriptreact"
+    },
+    "emmet.showExpandedAbbreviation": "inMarkupAndStylesheetFilesOnly"
+
+ }
+
 }
