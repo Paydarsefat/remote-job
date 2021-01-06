@@ -1,9 +1,11 @@
-import { jsx } from '@emotion/react'
+import { jsx, useTheme } from '@emotion/react'
 import { css } from '@emotion/css'
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Button from '../components/Button/Button'
 
 export default function Home() {
+  const theme = useTheme()
   const color = 'white'
   return (
     <div className={styles.container}>
@@ -13,33 +15,8 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div
-          className={css`
-            padding: 32px;
-            background-color: hotpink;
-            font-size: 24px;
-            border-radius: 4px;
-            &:hover {
-              color: ${color};
-            }
-          `}
-        >
-          Remote Job
-        </div>
-        <div
-          className={css`
-            margin-top: 10px;
-            padding: 32px;
-            background-color: green;
-            font-size: 24px;
-            border-radius: 4px;
-            &:hover {
-              color: ${color};
-            }
-          `}
-        >
-          Remote Job
-        </div>
+        <Button type="submit">Remote Job primary</Button>
+        <Button>Remote Job secondary</Button>
       </main>
     </div>
   )
